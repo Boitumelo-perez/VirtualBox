@@ -36,20 +36,16 @@ function closeSecondOverlay() {
 }
 
 function sharePage() {
-    const pageUrl = encodeURIComponent(window.location.href);  // Get the current page URL
-    const shareMessage = encodeURIComponent("Check out this hilarious page! 😄");
-
-    const whatsappUrl = `https://wa.me/?text=${shareMessage}%20${pageUrl}`;
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-    const instagramUrl = `https://www.instagram.com`;  // Instagram doesn't allow direct sharing like this
-
-    const shareOptions = window.open(
-        `https://www.addthis.com/bookmark.php?v=250&winname=addthis&pub=ra-56cfa10e2e4f83c3&source=addthis&tt=0&ct=14&tools=1&url=${pageUrl}&title=${shareMessage}&back=1`,
-        'Share',
-        'height=600,width=600,scrollbars=yes'
-    );
-
-    if (shareOptions) {
-        shareOptions.focus();
+    if (navigator.share) {
+        navigator.share({
+            title: document.title,
+            url: window.location.href
+        }).then(() => {
+            console.log('Page shared successfully');
+        }).catch((error) => {
+            console.error('Error sharing the page:', error);
+        });
+    } else {
+        alert('Web Share API is not supported in your browser.');
     }
 }

@@ -14,7 +14,7 @@ body {
     overflow: hidden;
 }
 
-h1, h2, p {
+h1, h2, p, .ani-text {
     font-family: 'Pacifico', cursive;
     color: #b2004e;
     margin: 10px 0;
@@ -74,6 +74,11 @@ p {
 /* Moving "No" Button */
 .no-btn {
     position: relative;
+    transition: transform 0.3s ease;
+}
+
+.yes-btn {
+    position: initial;
 }
 
 /* Overlay */
@@ -163,6 +168,9 @@ p {
     h2 {
         font-size: 18px;
     }
+    h3.ani-text {
+        font-size: 38px;
+    }
 }
 
 
@@ -216,9 +224,10 @@ p {
     font-weight: bold;
     color: #333;
     white-space: nowrap;
+    margin: 10px 0;
     overflow: hidden;
     width: 0;
-    animation: typing 6s steps(30) 0.4s forwards, blink 0.75s step-end infinite;
+    animation: typing 4s steps(30) 0.4s forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
