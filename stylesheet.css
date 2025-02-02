@@ -1,0 +1,238 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1, h2, p {
+    font-family: 'Pacifico', cursive;
+    color: #b2004e;
+    margin: 10px 0;
+}
+
+h1 {
+    position: fixed;
+    top: 40px;
+    font-size: 50px;
+    -webkit-text-stroke: 0.1px #d5508a;
+}
+
+h2 {
+    position: fixed;
+    top: 260px;
+}
+
+p {
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+}
+
+
+/* Button Styling */
+.button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff6b81;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #ff4757;
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Moving "No" Button */
+.no-btn {
+    position: relative;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Message Box */
+#messageBox {
+    display: flex;
+    flex-direction: column;  /* Arrange items in a column */
+    justify-content: center;  /* Vertically center */
+    align-items: center;  /* Horizontally center */
+    text-align: center;
+    position: relative;  /* This allows positioning of elements inside */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    max-width: 90%;  /* Allow for responsiveness */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden; 
+    width: 90%;
+    height: 80%;
+}
+
+#messageBox h3 {
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+#dancingGif {
+    width: 100%;  /* Adjust width as needed */
+    max-width: 500px;  /* Optional: limit the max width */
+    display: block;
+    margin: 20px auto;
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    /* top: 65px;  Position 10px from the top of the message box */
+    /* right: 60px;  Position 10px from the right of the message box */
+    top:10px;
+    right: 10px;
+    background-color: #f44336;  /* Red button */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+
+#secondOverlay {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+#secondMessageBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    /* max-width: 600px; */
+    position: relative;
+}
+
+.share-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    position: fixed;
+    bottom: 5px;
+    right: 150px;
+}
+
+.share-icon {
+    width: 30px;
+    height: 20px;
+}
+
+.ani-text {
+    display: inline-block;
+    font-family: 'Pacifico', cursive;
+    font-size: 78px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 6s steps(30) 0.4s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+

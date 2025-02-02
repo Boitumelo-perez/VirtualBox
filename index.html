@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Box</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>February the 14th is approaching!</h1>
+    <h2>Would you like to be my Valentine❤️?</h2>
+
+    <div class="button-container">
+        <button class="button yes-btn" id="yesBtn" onclick="showOverlay()">Yes</button>
+        <button class="button no-btn" id="noBtn" onclick="shiftButton()">No</button>
+    </div>
+
+    <div id="overlay">
+        <div id="messageBox">
+            <h3>Yay! of course you're dying to be😍❤️</h3>
+            <h3>It's me, duh...</h3>
+            <img src="celebration-unscreen.gif" alt="Dancing character" id="dancingGif">
+            <button class="button close-btn" onclick="closeOverlay()">X</button>
+        </div>
+    </div>
+
+    <div id="secondOverlay">
+        <div id="secondMessageBox">
+            <h3 class="ani-text">Just kidding! 😜</h3>
+            <p> Spread the humour!</p>
+            <button class="button share-btn" onclick="sharePage()">
+                <img src="share.svg" class="share-icon">
+                <!-- <img src="https://img.icons8.com/ios/452/share.png" alt="Share Icon" class="share-icon"> -->
+            </button>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+
+    <p>from me to you, and you alone XO XO</p>
+</body>
+
+</html>
