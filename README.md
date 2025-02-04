@@ -11,7 +11,7 @@ Valentine's Virtual Box is a fun, interactive web app designed to spread humor a
 
 ## Live Demo 🚀
 
-Check out the live version here: [Valentine's Virtual Box]((https://valentinesvirtualbox.wuaze.com/))
+Check out the live version here: https://valentinesvirtualbox.wuaze.com
 
 ## Deployment
 
@@ -25,3 +25,6 @@ Check out the live version here: [Valentine's Virtual Box]((https://valentinesvi
 
    ```bash
    git clone https://github.com/boitumelo-perez/valentines-virtual-box.git
+   
+ ## User Interface
+ ![Screenshot (421)](https://github.com/Boitumelo-perez/VirtualBox/blob/master/Screenshot%20(429).png)
